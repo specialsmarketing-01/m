@@ -1,0 +1,95 @@
+import { ContactForm } from "@/components/ContactForm";
+import { HeroSection } from "@/components/HeroSection";
+import { siteConfig } from "@/lib/data/site";
+import { IMG } from "@/lib/images";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Contact us",
+  description:
+    "Contact CTST for Security Solutions Qatar consultations — CCTV Systems Qatar, Access Control Systems Qatar, Surveillance Systems Qatar, and telecom integration.",
+  path: "/contact-us",
+});
+
+export default function ContactPage() {
+  return (
+    <>
+      <HeroSection
+        title="Contact CTST"
+        subtitle="Tell us about your site, timelines, and stakeholders — we will respond with a practical next step."
+        image={IMG.contact}
+        imageAlt="Communication and contact concept"
+        ctaLabel="Call us"
+        ctaHref={`tel:${siteConfig.phoneTel}`}
+        secondaryCtaLabel="Email"
+        secondaryCtaHref={`mailto:${siteConfig.email}`}
+      />
+      <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-[#0a1628]">Company information</h2>
+            <dl className="mt-6 space-y-4 text-slate-700">
+              <div>
+                <dt className="text-sm font-semibold text-slate-500">Brand</dt>
+                <dd className="mt-1">{siteConfig.fullName}</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-slate-500">Phone</dt>
+                <dd className="mt-1">
+                  <a
+                    className="text-[#F37021] hover:underline"
+                    href={`tel:${siteConfig.phoneTel}`}
+                  >
+                    {siteConfig.phoneDisplay}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-slate-500">Email</dt>
+                <dd className="mt-1">
+                  <a
+                    className="text-[#F37021] hover:underline"
+                    href={`mailto:${siteConfig.email}`}
+                  >
+                    {siteConfig.email}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-slate-500">Location</dt>
+                <dd className="mt-1">
+                  {siteConfig.addressLines.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </dd>
+              </div>
+            </dl>
+            <p className="mt-8 text-sm text-slate-600">
+              For urgent site support, please reference your project ID and site
+              contact in your message so we can route your request quickly.
+            </p>
+          </div>
+          <ContactForm id="contact-page" />
+        </div>
+      </section>
+      <section className="border-t border-slate-200 bg-slate-100 py-10">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg font-semibold text-[#0a1628]">Map</h2>
+          <p className="mt-2 text-sm text-slate-600">
+            Map placeholder — embed Google Maps or your preferred provider using
+            the office coordinates for Doha, Qatar.
+          </p>
+          <div
+            className="mt-4 flex aspect-[21/9] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white text-sm text-slate-500"
+            role="img"
+            aria-label="Map placeholder"
+          >
+            Map embed area (replace with iframe)
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
