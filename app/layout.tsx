@@ -19,6 +19,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   title: {
     default: `${siteConfig.name} | Security Solutions Qatar`,
     template: `%s | ${siteConfig.name}`,
