@@ -78,22 +78,6 @@ export default function ContactPage() {
           <ContactForm id="contact-page" />
         </div>
       </section>
-      <section className="border-t border-slate-200 bg-slate-100 py-10">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-lg font-semibold text-[#0a1628]">Map</h2>
-          <p className="mt-2 text-sm text-slate-600">
-            Map placeholder — embed Google Maps or your preferred provider using
-            the office coordinates for Doha, Qatar.
-          </p>
-          <div
-            className="mt-4 flex aspect-[21/9] items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white text-sm text-slate-500"
-            role="img"
-            aria-label="Map placeholder"
-          >
-            Map embed area (replace with iframe)
-          </div>
-        </div>
-      </section>
     </>
   );
 }
