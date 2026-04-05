@@ -18,7 +18,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "CTST | Security Solutions Qatar",
   description:
-    "CTST designs and delivers Security Solutions Qatar organizations rely on — Surveillance Systems Qatar, Access Control Systems Qatar, CCTV Systems Qatar, telecom, and secure access programs.",
+    "Cyberox Technology Service W.L.L (CTST), Qatar — Surveillance Systems Qatar, Access Control Systems Qatar, CCTV Systems Qatar, telecom, and secure access. +974 4436 1775 · info@ctst.qa",
   path: "/",
 });
 

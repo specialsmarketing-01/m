@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/ContactForm";
+import { ContactInline } from "@/components/ContactInline";
 import { HeroSection } from "@/components/HeroSection";
 
 export type SolutionBlock = {
@@ -98,6 +99,7 @@ export function SolutionPageLayout({
               will respond with a practical next step for Security Solutions Qatar
               deployments.
             </p>
+            <ContactInline className="mt-4 text-slate-500" />
           </div>
           <ContactForm id="solution-contact" />
         </div>

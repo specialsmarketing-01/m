@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Contact us",
   description:
-    "Contact CTST for Security Solutions Qatar consultations — CCTV Systems Qatar, Access Control Systems Qatar, Surveillance Systems Qatar, and telecom integration.",
+    "Contact Cyberox Technology Service W.L.L (CTST): +974 4436 1775, info@ctst.qa — Security Solutions Qatar, CCTV, access control, and telecom.",
   path: "/contact-us",
 });
 
@@ -15,8 +15,8 @@ export default function ContactPage() {
   return (
     <>
       <HeroSection
-        title="Contact CTST"
-        subtitle="Tell us about your site, timelines, and stakeholders — we will respond with a practical next step."
+        title="Contact us"
+        subtitle="Cyberox Technology Service W.L.L (CTST) — tell us about your site, timelines, and stakeholders; we will respond with a practical next step."
         image={IMG.contact}
         imageAlt="Communication and contact concept"
         ctaLabel="Call us"
@@ -30,8 +30,12 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-[#0a1628]">Company information</h2>
             <dl className="mt-6 space-y-4 text-slate-700">
               <div>
-                <dt className="text-sm font-semibold text-slate-500">Brand</dt>
-                <dd className="mt-1">{siteConfig.fullName}</dd>
+                <dt className="text-sm font-semibold text-slate-500">Company name</dt>
+                <dd className="mt-1">{siteConfig.legalName}</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-semibold text-slate-500">Trading as</dt>
+                <dd className="mt-1">{siteConfig.name}</dd>
               </div>
               <div>
                 <dt className="text-sm font-semibold text-slate-500">Phone</dt>

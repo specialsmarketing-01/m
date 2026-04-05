@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContactForm } from "@/components/ContactForm";
+import { ContactInline } from "@/components/ContactInline";
 import {
   blogCategoryLabels,
   blogPosts,
@@ -95,6 +96,7 @@ export default async function BlogPostPage({ params }: Props) {
               constraints — we will help translate priorities into an actionable
               roadmap.
             </p>
+            <ContactInline className="mt-4" />
           </div>
           <ContactForm id="blog-contact" />
         </div>

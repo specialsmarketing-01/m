@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/data/site";
 export const metadata = buildMetadata({
   title: "Privacy policy",
   description:
-    "How CTST collects, uses, and protects information when you use ctst.qa and our services.",
+    "How Cyberox Technology Service W.L.L (CTST) collects, uses, and protects information when you use ctst.qa.",
   path: "/privacy-policy",
 });
 
@@ -16,10 +16,10 @@ export default function PrivacyPolicyPage() {
       <div className="prose prose-slate mt-8 max-w-none">
         <h2 className="text-xl font-semibold text-[#0a1628]">Introduction</h2>
         <p className="mt-3 text-slate-700">
-          {siteConfig.name} (“we”, “us”) respects your privacy. This policy explains
-          how we handle information when you visit {siteConfig.domain}, submit
-          inquiries, or engage our services related to Security Solutions Qatar
-          programs.
+          {siteConfig.legalName}, trading as {siteConfig.name} (“we”, “us”), respects
+          your privacy. This policy explains how we handle information when you visit{" "}
+          {siteConfig.domain}, submit inquiries, or engage our services related to
+          Security Solutions Qatar programs.
         </p>
         <h2 className="mt-8 text-xl font-semibold text-[#0a1628]">
           Information we may collect
@@ -54,7 +54,11 @@ export default function PrivacyPolicyPage() {
         </p>
         <h2 className="mt-8 text-xl font-semibold text-[#0a1628]">Contact</h2>
         <p className="mt-3 text-slate-700">
-          Questions about this policy may be directed to {siteConfig.email}.
+          Questions about this policy may be directed to {siteConfig.email} or{" "}
+          <a href={`tel:${siteConfig.phoneTel}`} className="text-[#F37021] hover:underline">
+            {siteConfig.phoneDisplay}
+          </a>
+          .
         </p>
       </div>
     </div>

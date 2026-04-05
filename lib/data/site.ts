@@ -1,14 +1,19 @@
 export const siteConfig = {
+  /** Short trading / brand abbreviation */
   name: "CTST",
-  fullName: "CTST — Security & Technology Solutions",
+  /** Registered company name */
+  legalName: "Cyberox Technology Service W.L.L",
+  /** Primary display name for metadata, footer, and legal references */
+  fullName: "Cyberox Technology Service W.L.L",
   domain: "https://ctst.qa",
   description:
-    "CTST delivers Security Solutions Qatar organizations trust: CCTV Systems Qatar, Access Control Systems Qatar, Surveillance Systems Qatar, and integrated telecom and secure access programs.",
-  phoneDisplay: "+974 0000 0000",
-  phoneTel: "+97400000000",
+    "Cyberox Technology Service W.L.L (CTST) delivers Security Solutions Qatar organizations trust: CCTV Systems Qatar, Access Control Systems Qatar, Surveillance Systems Qatar, and integrated telecom and secure access programs.",
+  phoneDisplay: "+974 4436 1775",
+  phoneTel: "+97444361775",
   email: "info@ctst.qa",
   addressLines: ["Doha", "Qatar"],
-  whatsapp: "97400000000",
+  /** WhatsApp chat (digits only, country code without +) */
+  whatsapp: "97444361775",
 };
 
 export type NavItem = {

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { mainNav } from "@/lib/data/site";
+import { mainNav, siteConfig } from "@/lib/data/site";
 
 function NavLink({
   href,
@@ -45,10 +45,13 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0a1628]/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="flex items-center gap-2"
+          title={`${siteConfig.legalName} (${siteConfig.name})`}
+        >
           <span className="text-xl font-bold tracking-tight text-white">
-            {/** logo text */}
-            CTST
+            {siteConfig.name}
           </span>
           <span className="hidden text-xs font-medium uppercase tracking-wider text-[#F37021] sm:inline">
             Qatar

@@ -36,9 +36,36 @@ export function Footer() {
             <p className="text-lg font-bold tracking-tight text-white">
               {siteConfig.name}
             </p>
+            <p className="mt-1 text-sm font-medium text-slate-300">
+              {siteConfig.legalName}
+            </p>
             <p className="mt-3 text-sm leading-relaxed text-slate-400">
               {siteConfig.description}
             </p>
+            <dl className="mt-5 space-y-2 text-sm text-slate-400">
+              <div>
+                <dt className="sr-only">Phone</dt>
+                <dd>
+                  <a
+                    href={`tel:${siteConfig.phoneTel}`}
+                    className="transition hover:text-[#F37021]"
+                  >
+                    {siteConfig.phoneDisplay}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="sr-only">Email</dt>
+                <dd>
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="transition hover:text-[#F37021]"
+                  >
+                    {siteConfig.email}
+                  </a>
+                </dd>
+              </div>
+            </dl>
           </div>
           {footerLinks.map((col) => (
             <div key={col.title}>
@@ -62,7 +89,7 @@ export function Footer() {
         </div>
         <div className="mt-10 border-t border-white/10 pt-8 text-sm text-slate-500">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            © {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,12 +1,14 @@
 import { ContactForm } from "@/components/ContactForm";
+import { ContactInline } from "@/components/ContactInline";
 import { HeroSection } from "@/components/HeroSection";
 import { IMG } from "@/lib/images";
+import { siteConfig } from "@/lib/data/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "About CTST",
+  title: "About us",
   description:
-    "Learn about CTST in Qatar — mission, vision, and why organizations choose our Security Solutions Qatar delivery model.",
+    "Cyberox Technology Service W.L.L (CTST) in Qatar — mission, vision, and Security Solutions Qatar delivery.",
   path: "/about-us",
 });
 
@@ -15,7 +17,7 @@ export default function AboutPage() {
     <>
       <HeroSection
         title="About CTST"
-        subtitle="A Qatar-focused security and technology integrator committed to dependable delivery, clear governance, and long-term support."
+        subtitle={`${siteConfig.legalName} — a Qatar-focused security and technology integrator committed to dependable delivery, clear governance, and long-term support.`}
         image={IMG.citySkyline}
         imageAlt="Modern city skyline representing Qatar infrastructure"
         ctaLabel="Contact us"
@@ -25,8 +27,9 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold text-[#0a1628]">Company overview</h2>
         <p className="mt-4 text-slate-600">
-          CTST supports organizations that operate in complex, high-visibility
-          environments. We combine structured project governance with hands-on
+          {siteConfig.legalName} (CTST) supports organizations that operate in
+          complex, high-visibility environments. We combine structured project
+          governance with hands-on
           engineering across surveillance, access, perimeter awareness, and
           resilient connectivity — helping teams reduce risk without slowing the
           business.
@@ -104,6 +107,7 @@ export default function AboutPage() {
               into a practical plan for Surveillance Systems Qatar deployments and
               related controls.
             </p>
+            <ContactInline className="mt-4" />
           </div>
           <ContactForm id="about-contact" />
         </div>

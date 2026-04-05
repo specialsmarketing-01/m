@@ -1,4 +1,5 @@
 import { ContactForm } from "@/components/ContactForm";
+import { ContactInline } from "@/components/ContactInline";
 import { HeroSection } from "@/components/HeroSection";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/lib/data/projects";
@@ -48,6 +49,7 @@ export default function ProjectsPage() {
               Share your scope, stakeholders, and timeline — we will help you build
               a pragmatic delivery plan for CCTV Systems Qatar and related systems.
             </p>
+            <ContactInline className="mt-4" />
           </div>
           <ContactForm id="projects-contact" />
         </div>

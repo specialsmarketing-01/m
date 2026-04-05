@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/data/site";
 export const metadata = buildMetadata({
   title: "Terms & conditions",
   description:
-    "Terms governing use of the CTST website and general engagement conditions. Professional services are subject to separate agreements.",
+    "Terms governing use of the Cyberox Technology Service W.L.L (CTST) website. Professional services are subject to separate agreements.",
   path: "/terms-conditions",
 });
 
@@ -42,14 +42,18 @@ export default function TermsPage() {
           Limitation of liability
         </h2>
         <p className="mt-3 text-slate-700">
-          To the maximum extent permitted by law, {siteConfig.name} shall not be
+          To the maximum extent permitted by law, {siteConfig.legalName} shall not be
           liable for indirect or consequential damages arising from website use.
           Some jurisdictions do not allow certain limitations; in those cases, our
           liability is limited to the fullest extent permitted.
         </p>
         <h2 className="mt-8 text-xl font-semibold text-[#0a1628]">Contact</h2>
         <p className="mt-3 text-slate-700">
-          For contractual questions, contact {siteConfig.email}.
+          For contractual questions: {siteConfig.email} or{" "}
+          <a href={`tel:${siteConfig.phoneTel}`} className="text-[#F37021] hover:underline">
+            {siteConfig.phoneDisplay}
+          </a>
+          .
         </p>
       </div>
     </div>

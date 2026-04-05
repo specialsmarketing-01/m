@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ContactForm } from "@/components/ContactForm";
+import { ContactInline } from "@/components/ContactInline";
 import { getProjectBySlug, projects } from "@/lib/data/projects";
 import { buildMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
@@ -117,6 +118,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               programs — we will propose an approach aligned to your operational
               model.
             </p>
+            <ContactInline className="mt-4" />
           </div>
           <ContactForm id="project-detail-contact" />
         </div>
